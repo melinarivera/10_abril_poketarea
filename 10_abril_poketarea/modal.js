@@ -15,11 +15,10 @@ export class ModalPokemon {
         <div class="modal">
           <button class="cerrar" id="btnCerrar">&times;</button>
           <h2>${pokemon.name}</h2>
-          <p>Pokémon #${pokemon.id}</p>
           ${
             imagenGrande
               ? `<img src="${imagenGrande}" alt="${pokemon.name}" />`
-              : `<p>Imagen no disponible para este Pokémon</p>`
+              : `<p>Imagen no disponible</p>`
           }
         </div>
       </div>

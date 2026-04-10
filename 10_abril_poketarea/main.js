@@ -5,7 +5,7 @@ import { ModalPokemon } from "./modal.js";
 const contenedorCards = document.getElementById("contenedorCards");
 const modalContainer = document.getElementById("modalContainer");
 const mensajeCarga = document.getElementById("mensajeCarga");
-const buscador = document.getElementById("buscador");
+
 
 const modal = new ModalPokemon(modalContainer);
 
@@ -42,14 +42,3 @@ function activarEventosCards() {
     });
   });
 }
-
-buscador.addEventListener("input", () => {
-  const texto = buscador.value.toLowerCase();
-
-  const pokemonFiltrados = listaCompletaPokemon.filter((pokemon) =>
-    pokemon.name.toLowerCase().includes(texto),
-  );
-
-  pintarCards(pokemonFiltrados, contenedorCards);
-  activarEventosCards();
-});

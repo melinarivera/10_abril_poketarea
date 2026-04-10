@@ -6,13 +6,13 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(180deg, #f6f8fc 0%, #e9eef7 100%);
+  background: linear-gradient(180deg, #babcc0 0%, #e9eef7 100%);
   color: #1f2937;
   min-height: 100vh;
 }
 
 .header {
-  background: linear-gradient(135deg, #ef5350, #d32f2f);
+  background: linear-gradient(135deg, #d72c2a, #bd2525);
   color: white;
   text-align: center;
   padding: 35px 20px;

@@ -22,7 +22,6 @@ export function pintarCards(listaPokemon, contenedor) {
             "
           />
           <h3>${pokemon.name}</h3>
-          <p>#${id}</p>
         </article>
       `;
     })
