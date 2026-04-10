@@ -4,16 +4,23 @@ export class ModalPokemon {
   }
 
   abrir(pokemon) {
+    const imagenGrande =
+      pokemon.sprites.other?.["official-artwork"]?.front_default ||
+      pokemon.sprites.front_default ||
+      pokemon.sprites.front_shiny ||
+      "";
+
     this.container.innerHTML = `
       <div class="modal-fondo">
         <div class="modal">
           <button class="cerrar" id="btnCerrar">&times;</button>
           <h2>${pokemon.name}</h2>
           <p>Pokémon #${pokemon.id}</p>
-          <img
-            src="${pokemon.sprites.other["official-artwork"].front_default}"
-            alt="${pokemon.name}"
-          />
+          ${
+            imagenGrande
+              ? `<img src="${imagenGrande}" alt="${pokemon.name}" />`
+              : `<p>Imagen no disponible para este Pokémon</p>`
+          }
         </div>
       </div>
     `;
